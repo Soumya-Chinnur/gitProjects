@@ -1,0 +1,220 @@
+@import "../../styles/variable";
+@import "../../styles/mixins";
+.oreoapp {
+  .md-drawer {
+    width: 230px;
+    max-width: calc(100vw - 125px);
+    box-shadow: 1px 0px 20px rgba(0, 0, 0, 0.08);
+  }
+  .md-primary {
+    background: #8c99e0;
+    height: 62px;
+  }
+  .toolbar {
+    background: $color;
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.15);
+  }
+  .button {
+    border: 1px solid $color;
+    border-radius: 62px;
+    text-transform: capitalize;
+    click: click;
+  }
+  .title {
+    color: white;
+    font-size: 18px;
+    text-transform: uppercase;
+    margin-left: 10px;
+    padding-right: 25px;
+  }
+  .iconscolor {
+    border-color: #ffffff;
+    height: 35px;
+    padding: 8px;
+  }
+  .logo {
+    width: 30px;
+  }
+  .toolOreo {
+    width: 100%;
+    @include display(flex);
+    @include justi(space-between);
+  }
+  .firsticons {
+    @include display(flex);
+    align-items: center;
+  }
+  .search {
+    padding: 11px;
+    width: 49%;
+    border-radius: 25px;
+  }
+  .searchbar {
+    @include display(flex);
+    width: 58%;
+  }
+  .searchIcon {
+    position: absolute;
+    transform: translateY(-10px);
+    right: 391px;
+    top: 55%;
+  }
+  .cornerIcons {
+    @include display(flex);
+    @include justi(space-between);
+    align-items: center;
+    width: 6%;
+  }
+  .image {
+    height: 30px;
+    width: 30px;
+    click: $click;
+  }
+  .md-title {
+    font-family: $font-family;
+  }
+  .oreoContainer {
+    opacity: $opacity;
+    color:black;
+  }
+ 
+  .buttonConatiner {
+    @include display(flex);
+    @include justi(space-between);
+    width: 88%;
+  }
+  .userContainer {
+    padding: 11px;
+  }
+  .home {
+    padding: 2px;
+  }
+  .user {
+    padding: 2px;
+    opacity: $opacity;
+  }
+  .user1 {
+    margin: 3%;
+  }
+  .user1:hover {
+    color: $color;
+  }
+  .md-list-item-text:hover {
+    color: $color;
+  }
+  .md-list-item-text {
+    margin: 2%;
+    opacity: $opacity;
+  }
+  .md-list {
+    font-weight: 700;
+    color: #455a64;
+  }
+  .Traffic {
+    color: #f96332;
+  }
+  .server {
+    color: #2ca8ff;
+  }
+  .productDiv {
+    background-color: $color;
+    height: 150px;
+    width: 100%;
+    position: relative;
+  }
+  .app {
+    padding: 0px !important;
+  }
+  .ok {
+    width: 21%;
+  }
+  .button{
+    color:white;
+  }
+  .drawer{
+    width: 20%;
+  }
+  .header {
+    // display: flex;
+    // width: 15%;
+    padding: 5px;
+    color: white;
+  }
+  .productHeader {
+    @include display(flex);
+    @include justi(space-between);
+    padding: 11px;
+  }
+  .md-button {
+    border-radius: 60px;
+    background: rgba(255, 255, 255, 0.3);
+    text-transform: capitalize;
+  }
+  .cards {
+    display: flex;
+  }
+  .card {
+    width: 22%;
+  }
+  // .text{
+  //   color:#6572b8;
+  //   margin: 2%;
+  //   font-weight: 700;
+
+  // }
+  .imageContainer {
+    padding: 20px;
+    border-radius: 24px;
+  }
+  img:hover {
+    transform: scaleX(-1);
+  }
+  .spanItems {
+    font-size: 16px;
+    color: #2c2c2c;
+  }
+  .span {
+    margin: 7px;
+  }
+  .spanRate {
+    @include display(flex);
+    justify-content: space-around;
+    margin: 7px;
+    color: #2c2c2c;
+  }
+  .spaniiii{
+    color:red;
+  }
+  .cardsContainer{
+    margin-top: 3%;
+  }
+  .cards1{
+    @include display(flex);
+  }
+  .card1{
+    width:31%;
+  }
+  // .Avatar{
+  //   width:20%;
+  // }
+  .md-avatar{
+    width: 86px;
+    height: 83px;
+    border: 3px solid #fff;
+    box-shadow: 0px 5px 25px 0px rgba(0,0,0,0.2);
+  }
+  .name{
+    font-size:18px;
+    font-weight: 600px;
+    margin:4px;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  .nameContainer{
+   margin:10px;
+   padding:5px;
+  }
+  .nameContainer{
+    margin:10px;
+    padding:5px;
+  }
+}

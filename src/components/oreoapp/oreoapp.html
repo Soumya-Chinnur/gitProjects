@@ -1,0 +1,418 @@
+<section class="oreoapp">
+  <md-app>
+   
+    <md-app-toolbar class="toolbar">
+      <div class="toolOreo">
+        <div class="firsticons">
+          <div class="toolbarOreo">
+            <img class="logo" src="../../assets/images/logo.svg" />
+            <span class="title">oreo</span>
+          </div>
+          <div class="toolbarIcons">
+            <img class="iconscolor" src="../../assets//swap.svg" />
+            <img class="iconscolor" src="../../assets/insert_invitation.svg" />
+            <img class="iconscolor" src="../../assets/mail.svg" />
+            <img class="iconscolor" src="../../assets/contact_phone.svg" />
+            <img class="iconscolor" src="../../assets/notifications.svg" />
+            <img class="iconscolor" src="../../assets/flag.svg" />
+          </div>
+        </div>
+        <div class="searchbar">
+          <input placeholder="Search..." class="search" />
+          <img class="searchIcon" src="../../assets/search.svg" />
+        </div>
+        <div class="cornerIcons">
+          <div>
+            <img src="../../assets/power_setting.svg" />
+          </div>
+          <div>
+            <img src="../../assets/settings.svg" />
+          </div>
+        </div>
+      </div>
+    </md-app-toolbar>
+
+    <md-app-drawer class="drawer" md-permanent="full">
+      <md-toolbar class="md-transparent" md-elevation="0">
+        <div class="buttonConatiner">
+      
+            <md-button class="button">
+              <div>
+                <img
+                  class="home"
+                  src="../../assets/home.svg"
+                  alt=""
+                  srcset=""
+                />
+                <span class="oreoContainer">Oreo</span>
+              </div>
+            </md-button>
+          <div @click="oreobutton" class="userContainer">
+            
+              <img
+                class="user"
+                src="../../assets/person.svg"
+                alt=""
+                srcset=""
+              />
+              <span class="oreoContainer">User</span>
+          
+          </div>
+      
+        </div>
+      </md-toolbar>
+
+      
+      <md-list v-if="flag==false" >
+        <md-list-item>
+          <span class="md-list">-- Main</span>
+        </md-list-item>
+
+        <md-list-item>
+          <img class="user1" src="../../assets/home.svg" alt="" srcset="" />
+          <span class="md-list-item-text">Dashboard</span>
+          <img
+            class="user1"
+            src="../../assets/chevron_right.svg"
+            alt=""
+            srcset=""
+          />
+        </md-list-item>
+
+        <md-list-item>
+          <img class="user1" src="../../assets/apps.svg" alt="" srcset="" />
+          <span class="md-list-item-text">App</span>
+          <img
+            class="user1"
+            src="../../assets/chevron_right.svg"
+            alt=""
+            srcset=""
+          />
+        </md-list-item>
+
+        <md-list-item>
+          <img
+            class="user1"
+            src="../../assets/local_grocery.svg"
+            alt=""
+            srcset=""
+          />
+
+          <span class="md-list-item-text" style= "color:#6572b8 ;font-weight:700">Ecommerce</span>
+          <img
+            class="user1"
+            src="../../assets/chevron_right.svg"
+            alt=""
+            srcset=""
+          />
+        </md-list-item>
+
+        <md-list-item>
+          <img
+            class="user1"
+            src="../../assets/swap_calls.svg"
+            alt=""
+            srcset=""
+          />
+          <span class="md-list-item-text">User Interface(UI)</span>
+          <img
+            class="user1"
+            src="../../assets/chevron_right.svg"
+            alt=""
+            srcset=""
+          />
+        </md-list-item>
+
+        <md-list-item>
+          <span class="md-list">-- FORMS,CHARTS,TABLES</span>
+        </md-list-item>
+        <md-list-item>
+          <img class="user1" src="../../assets/widgets.svg" alt="" srcset="" />
+          <span class="md-list-item-text">Widgets</span>
+          <img
+            class="user1"
+            src="../../assets/chevron_right.svg"
+            alt=""
+            srcset=""
+          />
+        </md-list-item>
+
+        <md-list-item>
+          <img class="user1" src="../../assets/lock.svg" alt="" srcset="" />
+          <span class="md-list-item-text">Authentication</span>
+          <img
+            class="user1"
+            src="../../assets/chevron_right.svg"
+            alt=""
+            srcset=""
+          />
+        </md-list-item>
+
+        <md-list-item>
+          <img
+            class="user1"
+            src="../../assets/filter_none.svg"
+            alt=""
+            srcset=""
+          />
+          <span class="md-list-item-text">Sample Pages</span>
+          <img
+            class="user1"
+            src="../../assets/chevron_right.svg"
+            alt=""
+            srcset=""
+          />
+        </md-list-item>
+
+        <md-list-item>
+          <img class="user1" src="../../assets/map.svg" alt="" srcset="" />
+          <span class="md-list-item-text">Maps</span>
+          <img
+            class="user1"
+            src="../../assets/chevron_right.svg"
+            alt=""
+            srcset=""
+          />
+        </md-list-item>
+
+        <md-list-item>
+          <span class="md-list">-- EXTRA</span>
+        </md-list-item>
+
+        <md-list-item>
+          <span class="Traffic">TRAFFIC THIS MONTH</span>
+        </md-list-item>
+        <md-list-item>
+          <span class="server">SERVER LOAD</span>
+        </md-list-item>
+      </md-list>
+    
+    
+      <md-list v-if="flag==true" >
+        <div class="Avatar">
+          <md-avatar >
+              <img
+              class="user2"
+              src="../../assets/images/profilePic.jpg"
+              alt=""
+              srcset=""
+            />
+            </md-avatar>
+          </div>
+          
+        
+           
+              <div class="nameContainer" >
+            <div class="name">Michael</div>
+         
+            <div class="subName">UX UI Desginer</div>
+          </div>
+       
+          
+          
+      </md-list>
+    
+    </md-app-drawer>
+    <md-app-content class="app">
+      <div class="productDiv">
+        <div class="productHeader">
+          <div class="header">
+          <h2>Product</h2>
+          <label>Welcome To Oreo</label>
+          </div>
+    
+          <md-button  class="button" disabled>
+              <img
+              class="home"
+              src="../../assets/home.svg"
+              alt=""
+              srcset=""
+            />
+            Oreo/eCommerce/Product</md-button>
+      </div>
+      <div class="cards"> 
+          <md-card class="card" >   <img
+            class="imageContainer" 
+            src="../../assets/images/1.png"
+            alt=""
+            srcset=""
+          />
+          <div class="span">
+          <span class="spanItems">Simple Black Clock</span>
+        </div>
+          <div class="spanRate">
+          <span>$16.00</span>
+          <span  class="spaniiii">$13.00</span>
+          </div>
+        </md-card>
+          <md-card class="card">   <img
+            class="imageContainer"
+            src="../../assets/images/15.png"
+            alt=""
+            srcset=""
+          />
+          <div class="span">
+              <span class="spanItems">Simple Black Clock</span>
+            </div>
+              <div class="spanRate">
+              <span>$12.00</span>
+              <span  class="spaniiii">$11.00</span>
+              </div>
+        
+        </md-card>
+          <md-card class="card">   <img
+            class="imageContainer"
+            src="../../assets/images/13.png"
+            alt=""
+            srcset=""
+          />
+          <div class="span">
+              <span class="spanItems">Brown Candle</span>
+            </div>
+              <div class="spanRate">
+              <span>$23.00</span>
+              <span  class="spaniiii">$17.00</span>
+              </div></md-card>
+          <md-card class="card">   <img
+            class="imageContainer"
+            src="../../assets/images/4.png"
+            alt=""
+            srcset=""
+          />
+          <div class="span">
+              <span class="spanItems">Simple Black Clock</span>
+            </div>
+              <div class="spanRate">
+              <span>$16.00</span>
+              <span class="spaniiii">$10.00</span>
+              </div>
+        </md-card>
+        </div>
+
+  <div class="cardsContainer">
+  <div class="cards"> 
+      <md-card class="card" >   <img
+        class="imageContainer" 
+        src="../../assets/images/5.png"
+        alt=""
+        srcset=""
+      />
+      <div class="span">
+      <span class="spanItems">Brone Lamp Glasses</span>
+    </div>
+      <div class="spanRate">
+      <span>$18.00</span>
+      <span  class="spaniiii">$15.00</span>
+      </div>
+    </md-card>
+      <md-card class="card">   <img
+        class="imageContainer"
+        src="../../assets/images/14.png"
+        alt=""
+        srcset=""
+      />
+      <div class="span">
+          <span class="spanItems">Unero Small Bag</span>
+        </div>
+          <div class="spanRate">
+          <span>$21.00</span>
+          <span  class="spaniiii">$17.00</span>
+          </div>
+    
+    </md-card>
+      <md-card class="card">   <img
+        class="imageContainer"
+        src="../../assets/images/7.png"
+        alt=""
+        srcset=""
+      />
+      <div class="span">
+          <span class="spanItems">Unero Round Sunglasses</span>
+        </div>
+          <div class="spanRate">
+          <span>$16.00</span>
+          <span  class="spaniiii">$10.00</span>
+          </div></md-card>
+      <md-card class="card">   <img
+        class="imageContainer"
+        src="../../assets/images/8.png"
+        alt=""
+        srcset=""
+      />
+      <div class="span">
+          <span class="spanItems">Wood  Simple Clock</span>
+        </div>
+          <div class="spanRate">
+          <span>$16.00</span>
+          <span class="spaniiii">$10.00</span>
+          </div>
+    </md-card>
+    </div>
+  </div>
+
+
+  <div class="cardsContainer">
+      <div class="cards"> 
+          <md-card class="card" >   <img
+            class="imageContainer" 
+            src="../../assets/images/9.png"
+            alt=""
+            srcset=""
+          />
+          <div class="span">
+          <span class="spanItems">Wood Long TV Board</span>
+        </div>
+          <div class="spanRate">
+          <span>$16.00</span>
+          <span  class="spaniiii">$10.00</span>
+          </div>
+        </md-card>
+          <md-card class="card">   <img
+            class="imageContainer"
+            src="../../assets/images/10.png"
+            alt=""
+            srcset=""
+          />
+          <div class="span">
+              <span class="spanItems">Simple Balck Clock</span>
+            </div>
+              <div class="spanRate">
+              <span>$16.00</span>
+              <span  class="spaniiii">$10.00</span>
+              </div>
+        
+        </md-card>
+          <md-card class="card">   <img
+            class="imageContainer"
+            src="../../assets/images/11.png"
+            alt=""
+            srcset=""
+          />
+          <div class="span">
+              <span class="spanItems">Wood Simple Chair V2  </span>
+            </div>
+              <div class="spanRate">
+              <span>$16.00</span>
+              <span  class="spaniiii">$10.00</span>
+              </div></md-card>
+          <md-card class="card">   <img
+            class="imageContainer"
+            src="../../assets/images/12.png"
+            alt=""
+            srcset=""
+          />
+          <div class="span">
+              <span class="spanItems"> Wood Simple Clock</span>
+            </div>
+              <div class="spanRate">
+              <span>$16.00</span>
+              <span class="spaniiii">$10.00</span>
+              </div>
+        </md-card>
+        </div>
+      </div>
+</div> 
+    
+    </md-app-content>
+  </md-app>
+</section>
